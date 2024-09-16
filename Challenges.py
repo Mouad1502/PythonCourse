@@ -43,4 +43,89 @@
 #     print("Game over you can't even choose the right color :/ !")
 ##############################################################################
 ## Day 4 Challenge
-
+# rock = '''
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# '''
+#
+# paper = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# '''
+#
+# scissors = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
+# import random
+# compChoice = random.randint(0,2)
+# userChoice = int(input("Choose between 0 for paper, 1 for rock and 2 for scissors :"))
+# if(userChoice == 0):
+#     print(paper)
+#     if compChoice == 1:
+#         print(rock)
+#         print("You won :D")
+#     elif compChoice == 0:
+#         print(paper)
+#         print("it's a tie :|")
+#     elif compChoice == 2:
+#         print(scissors)
+#         print("You lost :/")
+# if(userChoice == 1):
+#     print(rock)
+#     if compChoice == 1:
+#         print(rock)
+#         print("it's a tie :|")
+#     elif compChoice == 0:
+#         print(paper)
+#         print("You lost :/")
+#     elif compChoice == 2:
+#         print(scissors)
+#         print("You won :D")
+# if(userChoice == 2):
+#     print(scissors)
+#     if compChoice == 1:
+#         print(rock)
+#         print("You lost :/")
+#     elif compChoice == 0:
+#         print(paper)
+#         print("You won :D")
+#     elif compChoice == 2:
+#         print(scissors)
+#         print("it's a tie :|")
+################################################
+# Day 5 Challenge
+# import random
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+# numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+# symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+#
+# print("Welcome to the PyPassword Generator!")
+# nr_letters = int(input("How many letters would you like in your password?\n"))
+# nr_symbols = int(input(f"How many symbols would you like?\n"))
+# nr_numbers = int(input(f"How many numbers would you like?\n"))
+# initialPwd=""
+# for i in range(0,nr_letters):
+#     initialPwd += letters[random.randint(0,len(letters)-1)]
+# for i in range(0,nr_symbols):
+#     initialPwd += symbols[random.randint(0, len(symbols) - 1)]
+# for i in range(0,nr_numbers):
+#     initialPwd += numbers[random.randint(0,len(numbers)-1)]
+# l = list(initialPwd)
+# random.shuffle(l)
+# pwd = ''.join(l)
+# print(pwd)
+###########################################################################################
+# Day 6 Challenge
