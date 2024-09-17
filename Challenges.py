@@ -129,3 +129,21 @@
 # print(pwd)
 ###########################################################################################
 # Day 6 Challenge
+#Get in reeborg.ca and play the mini games using python function this is an example for the maze game:
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+#
+# while not at_goal():
+#     if front_is_clear():
+#         move()
+#         turn_right()
+#     else:
+#         while wall_in_front():
+#             turn_left()
+#         move()
+#         turn_right()
+#####################################################################################
+# Day 7 Challenge
+
