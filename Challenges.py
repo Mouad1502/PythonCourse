@@ -562,3 +562,71 @@
 #         print(f'The bidder with the highest price is: {highestBid} with a bidding price of {max}')
 # addBidder()
 ####################################################################
+# Day 10 challenge ###########
+# def add(n1, n2):
+#     return n1 + n2
+# def subtract(n1, n2):
+#     return n1 - n2
+# def multiply(n1, n2):
+#     return n1 * n2
+# def divide(n1, n2):
+#     return n1 / n2
+# calc = {
+#     "+":add,
+#     "-":subtract,
+#     "*":multiply,
+#     "/":divide
+# }
+# logo = """
+#  _____________________
+# |  _________________  |
+# | | Pythonista  0.1 | |  .----------------.  .----------------.  .----------------.  .----------------.
+# | |_________________| | | .--------------. || .--------------. || .--------------. || .--------------. |
+# |  ___ ___ ___   ___  | | |     ______   | || |      __      | || |   _____      | || |     ______   | |
+# | | 7 | 8 | 9 | | + | | | |   .' ___  |  | || |     /  \     | || |  |_   _|     | || |   .' ___  |  | |
+# | |___|___|___| |___| | | |  / .'   \_|  | || |    / /\ \    | || |    | |       | || |  / .'   \_|  | |
+# | | 4 | 5 | 6 | | - | | | |  | |         | || |   / ____ \   | || |    | |   _   | || |  | |         | |
+# | |___|___|___| |___| | | |  \ `.___.'\  | || | _/ /    \ \_ | || |   _| |__/ |  | || |  \ `.___.'\  | |
+# | | 1 | 2 | 3 | | x | | | |   `._____.'  | || ||____|  |____|| || |  |________|  | || |   `._____.'  | |
+# | |___|___|___| |___| | | |              | || |              | || |              | || |              | |
+# | | . | 0 | = | | / | | | '--------------' || '--------------' || '--------------' || '--------------' |
+# | |___|___|___| |___| |  '----------------'  '----------------'  '----------------'  '----------------'
+# |_____________________|
+# """
+# print(logo)
+# n1 = float(input("type the first number:\n"))
+# n2 = float(input("type the second number:\n"))
+# operation = input("""
+#     Choose the operation you want to do:
+#     + for addition
+#     - for substraction
+#     * for multiplication
+#     / for division
+# """)
+# result=0
+# if operation == '+':
+#     result = calc["+"](n1,n2)
+# elif operation == '-':
+#     result = calc["-"](n1,n2)
+# elif operation == '*':
+#     result = calc['*'](n1,n2)
+# elif operation == '/':
+#     result = calc['/'](n1,n2)
+# print(f"The result is {result}")
+# again = input(f"do you still want to work with {result}? if YES type 'y' if NO type 'n'")
+# while again == 'y':
+#     operation = input("""
+#         Choose the operation you want to do:
+#         + for addition
+#         - for subtraction
+#         * for multiplication
+#         / for division
+#     """)
+#     n2 = float(input("type the second number:\n"))
+#     result = calc[operation](result,n2)
+#     print(result)
+#     again = input(f"do you still want to work with {result}? if YES type 'y' if NO type 'n'")
+#     if again == 'n':
+#         print("Thank you for using Pythonista :D")
+####################################################################################
+
