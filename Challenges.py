@@ -535,4 +535,30 @@
 #
 # caesar()
 ###############################################################
-
+# Day 9 Challenge ##################################
+# # TODO-1: Ask the user for input
+# # TODO-2: Save data into dictionary {name: price}
+# # TODO-3: Whether if new bids need to be added
+# # TODO-4: Compare bids in dictionary
+#
+#
+# print("Welcome to the auction for the land of Antartica, the starting price is going to be 100k of Bitcoin (yes we only accept crypto bcuz it is untraceable) if you are willing to join fill in some basic information about you and other bidders.")
+# biddingDictionary = {}
+#
+# def addBidder():
+#     name = input("Hello, what is your name ?")
+#     bid = int(input("How much are you willing to bid? (the number should be bigger than 100 and the unit is going to be on hundreds)"))
+#     biddingDictionary[name] = bid
+#     askBid = input("is there any other bidder ? if YES type 'y' if NO type 'n'")
+#     if askBid == 'y' :
+#         addBidder()
+#     elif askBid == 'n' :
+#         max = biddingDictionary[next(iter(biddingDictionary))]
+#         highestBid = next(iter(biddingDictionary))
+#         for bidder in biddingDictionary:
+#             if biddingDictionary[bidder] > max:
+#                 max = biddingDictionary[bidder]
+#                 highestBid = bidder
+#         print(f'The bidder with the highest price is: {highestBid} with a bidding price of {max}')
+# addBidder()
+####################################################################
