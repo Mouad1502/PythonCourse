@@ -629,4 +629,80 @@
 #     if again == 'n':
 #         print("Thank you for using Pythonista :D")
 ####################################################################################
+# Day 11 Challenge ##################################################
+# logo = """
+# .------.            _     _            _    _            _
+# |A_  _ |.          | |   | |          | |  (_)          | |
+# |( \/ ).-----.     | |__ | | __ _  ___| | ___  __ _  ___| | __
+# | \  /|K /\  |     | '_ \| |/ _` |/ __| |/ / |/ _` |/ __| |/ /
+# |  \/ | /  \ |     | |_) | | (_| | (__|   <| | (_| | (__|   <
+# `-----| \  / |     |_.__/|_|\__,_|\___|_|\_\ |\__,_|\___|_|\_\\
+#       |  \/ K|                            _/ |
+#       `------'                           |__/
+# """
+# import random
+# print(logo)
+# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+# playAgain = "y"
+# def drawCards(user):
+#     user.append(random.choice(cards))
+#     user.append(random.choice(cards))
+#
+# def adjustForAces(hand):
+#     while sum(hand) > 21 and 11 in hand:
+#         hand[hand.index(11)] = 1
+#     return hand
+# def blackJack():
+#     computerCards = []
+#     userCards = []
+#     drawCards(userCards)
+#     drawCards(computerCards)
+#     userCards = adjustForAces(userCards)
+#     print("Your cards for now are: ", userCards)
+#     userScore = sum(userCards)
+#     computerScore = sum(computerCards)
+#     print(f"You have a total of: {userScore}")
+#     print(f"The first card of the dealer is: {computerCards[0]}")
+#     while userScore < 21:
+#         continueGame = input(
+#             "If you want to continue drawing type: 'hit' if you are satisfied with your hand type: 'stand'?")
+#         if continueGame == 'hit':
+#             userCards.append(random.choice(cards))
+#             userCards = adjustForAces(userCards)
+#             userScore = sum(userCards)
+#             print(f"You have a total of: {userScore}")
+#
+#         if continueGame == 'stand':
+#             while computerScore < 16:
+#                 computerCards.append(random.choice(cards))
+#                 computerCards = adjustForAces(computerCards)
+#                 computerScore = sum(computerCards)
+#             print(f'The dealer has: {computerScore}')
+#             if userScore > computerScore or computerScore >= 21:
+#                 print("You won!!")
+#                 return
+#         if userScore == computerScore:
+#             print("The game is a draw!!")
+#             return
+#         if computerScore == 20:
+#             print("The Dealer wins and you lose this one!")
+#             return
+#         if userScore == 20 and computerScore != 20:
+#             print(f"You have a total of: {userScore}")
+#             print(f"The dealer has a total of: {computerScore}")
+#             print("You won!! Congratulations.")
+#             return
+#         if userScore >= 21:
+#             print("You have exceeded the number needed your hand is a bust!! You lost :(")
+#             return
+# startGame = input("press 's' to start playing: \n")
+# if startGame == 's':
+#     while playAgain == 'y':
+#         blackJack()
+#         playAgain = input("Do you want to play again ? 'y' to say yes.")
+###############################################################################
+# Day 12 Challenge #################################
+
+
+
 
