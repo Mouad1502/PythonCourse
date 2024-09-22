@@ -702,7 +702,69 @@
 #         playAgain = input("Do you want to play again ? 'y' to say yes.")
 ###############################################################################
 # Day 12 Challenge #################################
-
+# logo = """
+#   / _ \_   _  ___  ___ ___  /__   \ |__   ___    /\ \ \_   _ _ __ ___ | |__   ___ _ __
+#  / /_\/ | | |/ _ \/ __/ __|   / /\/ '_ \ / _ \  /  \/ / | | | '_ ` _ \| '_ \ / _ \ '__|
+# / /_\\| |_| |  __/\__ \__ \  / /  | | | |  __/ / /\  /| |_| | | | | | | |_) |  __/ |
+# \____/ \__,_|\___||___/___/  \/   |_| |_|\___| \_\ \/  \__,_|_| |_| |_|_.__/ \___|_|
+# """
+# import random
+#
+# def guess_the_number(level):
+#     if level == 1:
+#         number = random.randint(0,10)
+#         tries = 3
+#         interval = [0,10]
+#         return tries, number, interval
+#     if level == 2:
+#         number = random.randint(0, 100)
+#         tries = 5
+#         interval = [0,100]
+#         return tries, number, interval
+#     if level == 3:
+#         number = random.randint(0,1000)
+#         tries = 10
+#         interval = [0,1000]
+#         return tries, number, interval
+#
+#
+# def check_number(guess,number):
+#     if guess < number:
+#         print("The number you guessed is lower than the winning number, try again")
+#     elif guess > number:
+#         print("The number you guessed is higher than the winning number, try again")
+#     if guess == number:
+#         print(f"Congratulations, you got the winning number :{number}")
+#
+#
+# def play_game():
+#     print(logo)
+#     print("Welcome to the game of Guess The Number.")
+#     print("""
+#     There are 3 levels to this game:
+#     level 1 for easy.
+#     level 2 for normal.
+#     level 3 for hard.
+#     """)
+#     guess = 0
+#     level = int(input("type '1' for easy, '2' for normal, '3' for hard: \t"))
+#     [tries, number, interval] = guess_the_number(level)
+#     while tries > 0 and guess != number:
+#         guess = int(input(f"You have {tries} tries left, guess the number in the range of {interval}:"))
+#         check_number(guess, number)
+#         tries -= 1
+#     if tries == 0:
+#         print(f"You have used all the tries granted for your level :(, the winning number is {number} .")
+#
+#
+# while True:
+#     play_game()
+#     playAgain = input("if you want to play again, press 'a'.")
+#     if playAgain != 'a':
+#         print("Thanks for playing.")
+#         exit()
+#########################################################################################
+# Day 13 Challenge ###########################################
 
 
 
