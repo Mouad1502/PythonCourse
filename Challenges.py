@@ -768,5 +768,62 @@
 # No challenge just some debugging exercises
 #####################################################################
 # Day 14 Challenge
-
+# logo = """
+#     __  ___       __
+#    / / / (_)___ _/ /_  ___  _____
+#   / /_/ / / __ `/ __ \/ _ \/ ___/
+#  / __  / / /_/ / / / /  __/ /
+# /_/ ///_/\__, /_/ /_/\___/_/
+#    / /  /____/_      _____  _____
+#   / /   / __ \ | /| / / _ \/ ___/
+#  / /___/ /_/ / |/ |/ /  __/ /
+# /_____/\____/|__/|__/\___/_/
+# """
+#
+# vs = """
+#  _    __
+# | |  / /____
+# | | / / ___/
+# | |/ (__  )
+# |___/____(_)
+# """
+# from game_data import data
+# import random
+# print(logo)
+# reps=0
+# def chosenData():
+#     firstChoice = random.choice(data)
+#     secondChoice = random.choice(data)
+#     while firstChoice == secondChoice:
+#         secondChoice = random.choice(data)
+#     userChoice = input(f"Who has more followers :\n A : {firstChoice['name']}\n {vs}\n B: {secondChoice['name']} \n").upper()
+#     if userChoice == 'A':
+#         return firstChoice, max(firstChoice['follower_count'], secondChoice['follower_count'])
+#     elif userChoice == 'B':
+#         return secondChoice, max(firstChoice['follower_count'], secondChoice['follower_count'])
+#     else:
+#         print("Invalid choice! Please select 'A' or 'B'.")
+#         return chosenData()  # Re-prompt if invalid input
+# def higherOrLower():
+#     global reps
+#     [userChoice,rightChoice] = chosenData()
+#     if userChoice['follower_count'] == rightChoice :
+#         reps += 1
+#         print('You are right keep going \n')
+#         higherOrLower()
+#     else:
+#         if reps == 0:
+#             print("You couldn't even guess the first one right what a bummer you are :/")
+#         else:
+#             print(f"You failed after {reps} time(s) !!")
+#         again = input("if you want to play again press 'y'.")
+#         if again == 'y':
+#             print(logo)
+#             reps = 0
+#             higherOrLower()
+#         else:
+#             print("Thanks for playing :D")
+# higherOrLower()
+#########################################################################################
+# Day 15 Challenge
 
