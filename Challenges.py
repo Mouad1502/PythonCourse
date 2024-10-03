@@ -826,4 +826,93 @@
 # higherOrLower()
 #########################################################################################
 # Day 15 Challenge
+# MENU = {
+#     "espresso": {
+#         "ingredients": {
+#             "water": 50,
+#             "coffee": 18,
+#         },
+#         "cost": 1.5,
+#     },
+#     "latte": {
+#         "ingredients": {
+#             "water": 200,
+#             "milk": 150,
+#             "coffee": 24,
+#         },
+#         "cost": 2.5,
+#     },
+#     "cappuccino": {
+#         "ingredients": {
+#             "water": 250,
+#             "milk": 100,
+#             "coffee": 24,
+#         },
+#         "cost": 3.0,
+#     }
+# }
+#
+# resources = {
+#     "water": 300,
+#     "milk": 20,
+#     "coffee": 100,
+# }
+#
+# listOfDrinks=["espresso","latte","cappuccino"]
+# def pick_the_drink():
+#     drinkChoice = input("What would you like? (espresso/latte/cappuccino):")
+#     return drinkChoice
+# def possible_drinks():
+#     possibleDrinks =[]
+#     for drink in listOfDrinks:
+#         ingredients = MENU[drink]["ingredients"]
+#         can_make = True
+#         for ingredient in ingredients:
+#             if resources[ingredient] < ingredients[ingredient]:
+#                 can_make = False
+#                 # print(f"Sorry, we don't have enough {ingredient} for a {drink}!!")
+#                 break
+#         if can_make == True:
+#             possibleDrinks.append(drink)
+#     return possibleDrinks
+# def calculate_cost():
+#     pennys = int(input("How many pennys are you inputing in the machine?: "))
+#     dimes = int(input("How many dimes are you inputing in the machine?: "))
+#     nickels = int(input("How many nickels are you inputing in the machine?: "))
+#     quarters = int(input("How many quarters are you inputing in the machine?: "))
+#     userCost = (pennys + dimes * 10 + nickels * 5 + quarters * 25) / 100
+#     return userCost
+# def check_cost(userCost,drinkChoice):
+#     drinkCost = MENU[drinkChoice]["cost"]
+#     if userCost >= drinkCost:
+#         print("You have put enough money for the drink.")
+#         print("Your change is :", userCost - drinkCost)
+#     lack = drinkCost - userCost
+#     while userCost < drinkCost:
+#         print(f"The money you put is not enough to get you the drink of choice please add {lack}.")
+#         addedCoins = calculate_cost()
+#         userCost += addedCoins
+# def coffee_machine():
+#     userCost = calculate_cost()
+#     drinkChoice = pick_the_drink()
+#     while drinkChoice not in listOfDrinks:
+#         print("You didn't type the right drink!!")
+#         drinkChoice = pick_the_drink()
+#
+#     if drinkChoice in listOfDrinks:
+#         if drinkChoice in possible_drinks():
+#             ingredients = MENU[drinkChoice]["ingredients"]
+#             for ingredient in ingredients:
+#                 resources[ingredient] -= ingredients[ingredient]
+#             check_cost(userCost, drinkChoice)
+#         else:
+#             possibleDrinks = possible_drinks()
+#             print(f"The drink you ordered is not available, please choose among these drinks: {possibleDrinks}")
+#             coffee_machine()
+#
+# coffee_machine()
+#################################################################
+# Day 16 Challenge ##############
+
+
 
