@@ -1040,6 +1040,63 @@
 #             coffee_maker.make_coffee(drink)
 ########################################################################
 # Day 17 Challenge #################################
+# class Question:
+#     def __init__(self, text, answer):
+#         self.text = text
+#         self.answer = answer
+# from question_model import Question
+# from data import question_data
+#
+# question_bank = [Question(item['text'], item['answer']) for item in question_data]
+#
+# class QuizBrain:
+#     def __init__(self):
+#         self.question_number = 0
+#         self.question_list = question_bank
+#
+#     def play(self):
+#         score = 0
+#         self.question_number = 0
+#         for question in question_bank:
+#             self.question_number += 1
+#             print(f"Q.{self.question_number}: {question.text}")
+#             answer = input("True or False ?")
+#             if answer.lower() == question.answer.lower():
+#                 score += 1
+#                 print(f"Good answer !!")
+#             else:
+#                 print("Wrong answer :(")
+#             print(f"your score is {score}/{self.question_number}")
+#         print(f"You got {score}/{self.question_number} in the quiz, thanks for playing!")
+#         again = input("do you want to play again? y or n ?")
+#         if again == 'y':
+#             self.play()
+#         else:
+#             print("Come back for more questions :D")
+# question_data = [
+#     {"text": "A slug's blood is green.", "answer": "True"},
+#     {"text": "The loudest animal is the African Elephant.", "answer": "False"},
+#     {"text": "Approximately one quarter of human bones are in the feet.", "answer": "True"},
+#     {"text": "The total surface area of a human lungs is the size of a football pitch.", "answer": "True"},
+#     {"text": "In West Virginia, USA, if you accidentally hit an animal with your car,"
+#              " you are free to take it home to eat.", "answer": "True"},
+#     {"text": "In London, UK, if you happen to die in the House of Parliament, you are entitled to a state funeral.", "answer": "False"},
+#     {"text": "It is illegal to pee in the Ocean in Portugal.", "answer": "True"},
+#     {"text": "You can lead a cow down stairs but not up stairs.", "answer": "False"},
+#     {"text": "Google was originally called 'Backrub'.", "answer": "True"},
+#     {"text": "Buzz Aldrin's mother's maiden name was 'Moon'.", "answer": "True"},
+#     {"text": "No piece of square dry paper can be folded in half more than 7 times.", "answer": "False"},
+#     {"text": "A few ounces of chocolate can to kill a small dog.", "answer": "True"}
+# ]
+# from quiz_brain import QuizBrain
+#
+#
+# quiz = QuizBrain()
+# quiz.play()
+##############################################################################3
+# Day 18 Challenge ################################
+
+
 
 
 
