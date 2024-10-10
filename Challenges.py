@@ -1094,9 +1094,26 @@
 # quiz = QuizBrain()
 # quiz.play()
 ##############################################################################3
-# Day 18 Challenge ################################
-
-
-
+# Day 18 Challenge ####################################3
+# from turtle import *
+# import random
+# abibiz_the_turtle = Turtle()
+# abibiz_the_turtle.shape("turtle")
+# abibiz_the_turtle.color("blue")
+# abibiz_the_turtle.pensize(3)
+#
+#
+# def draw_spirograph(size_of_gap):
+#     for _ in range(int(360 / size_of_gap)):
+#         # Generate a random color
+#         abibiz_the_turtle.pencolor(random.random(), random.random(), random.random())
+#
+#         abibiz_the_turtle.circle(100)  # Draw a circle with a radius of 100 units
+#         abibiz_the_turtle.setheading(abibiz_the_turtle.heading() + size_of_gap)
+# draw_spirograph(5)
+# screen = Screen()
+# screen.exitonclick()
+##################################################################
+# DAy 19 Challenge ############################33
 
 
