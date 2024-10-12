@@ -1114,6 +1114,146 @@
 # screen = Screen()
 # screen.exitonclick()
 ##################################################################
-# DAy 19 Challenge ############################33
-
+# Day 19 Challenge ############################33
+# PART 1 #############################################
+# from turtle import *
+# abibiz = Turtle()
+# screen = Screen()
+#
+#
+# def moveForward():
+#     abibiz.forward(5)
+# def moveBackward():
+#     abibiz.backward(5)
+# def turnLeft():
+#     abibiz.left(5)
+# def turnRight():
+#     abibiz.right(5)
+#
+# screen.listen()
+# screen.onkey(fun=moveForward, key="w")
+# screen.onkey(fun=moveBackward, key="s")
+# screen.onkey(fun=turnRight, key="d")
+# screen.onkey(fun=turnLeft, key="a")
+# screen.exitonclick()
+# PART 2 #############################################
+# import random
+# from turtle import Turtle, Screen
+# screen = Screen()
+# screen.setup(500,400)
+# x = -230
+# y = -50
+# user_bet = screen.textinput(title="Choose your winner",prompt="Pick a color you gambling piece of smith:")
+# rainbow_colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+# racing_turtles = []
+# for i in range(0,len(rainbow_colors)):
+#     t = Turtle()
+#     random_color = random.choice(rainbow_colors)
+#     t.color(random_color)
+#     t.penup()
+#     t.setposition(x,y)
+#     t.pendown()
+#     t.speed(random.randint(0, 5))
+#     y += 20
+#     rainbow_colors.remove(random_color)
+#     racing_turtles.append(t)
+# def start_race(list):
+#     race_on = True
+#     while race_on:
+#         for t in list:
+#             t.forward(random.randint(1, 10))  # Random speed for each turtle's movement
+#             if t.xcor() > 230:  # Turtle reached the finish line
+#                 race_on = False
+#                 winning_color = t.pencolor()
+#                 if winning_color == user_bet:
+#                     print(f"Congratulations! The {winning_color} turtle won, and you guessed correctly!")
+#                 else:
+#                     print(f"Sorry! The {winning_color} turtle won. Better luck next time!")
+#                 break
+# start_race(racing_turtles)
+# screen.exitonclick()
+#################################################################3
+# Day 20 Challenge ############################
+# from turtle import Turtle, Screen
+#
+# # Setup the screen
+# screen = Screen()
+# screen.setup(width=600, height=600)
+# screen.bgcolor("black")
+# screen.title("Snake 1.0")
+# screen.tracer(0)  # Turn off screen updates for smoother animation
+#
+# # Create the snake
+# snakeSize = 3
+# snake = []
+# snakeHead = Turtle()
+# snakeHead.shape('square')
+# snakeHead.color('white')
+# snake.append(snakeHead)
+#
+# # Create the body parts and add them to the snake
+# for _ in range(1, snakeSize):
+#     snakeBodyPart = Turtle()
+#     snakeBodyPart.shape('square')
+#     snakeBodyPart.color('white')
+#     snakeBodyPart.penup()
+#     snake.append(snakeBodyPart)
+#
+# # Position the snake segments
+# x_position = 0
+# for part in snake:
+#     part.penup()
+#     part.goto(x_position, 0)
+#     x_position -= 20
+#
+# # Define the snake movement
+# def move():
+#
+#     if snake[0].xcor() > 290 or snake[0].xcor() < -290 or snake[0].ycor() > 290 or snake[0].ycor() < -290:
+#         print("Game over! Snake hit the boundary.")
+#         return  # Stop moving if it hits the boundary
+#     # Move each segment in reverse order to follow the one ahead of it
+#     for idx in range(len(snake) - 1, 0, -1):
+#         new_x = snake[idx - 1].xcor()
+#         new_y = snake[idx - 1].ycor()
+#         snake[idx].goto(new_x, new_y)
+#
+#     # Move the snake head forward
+#     snake[0].forward(20)
+#
+#     # Call move again after a short delay (continuous movement)
+#     screen.update()  # Update the screen for smooth animation
+#     screen.ontimer(move, 100)  # Calls move() every 100 milliseconds
+#
+# # Control the snake direction with keyboard
+# def go_up():
+#     if snake[0].heading() != 270:  # Prevent the snake from going back on itself
+#         snake[0].setheading(90)
+#
+# def go_down():
+#     if snake[0].heading() != 90:
+#         snake[0].setheading(270)
+#
+# def go_left():
+#     if snake[0].heading() != 0:
+#         snake[0].setheading(180)
+#
+# def go_right():
+#     if snake[0].heading() != 180:
+#         snake[0].setheading(0)
+#
+# # Set up the key bindings
+# screen.listen()
+# screen.onkey(go_up, "Up")
+# screen.onkey(go_down, "Down")
+# screen.onkey(go_left, "Left")
+# screen.onkey(go_right, "Right")
+#
+# # Start the movement
+# move()
+#
+# screen.exitonclick()
+# screen.mainloop()  # Keep the window open
+##########################################################################################
+# Day 21 Challenge #########################################
 
