@@ -1173,87 +1173,162 @@
 # start_race(racing_turtles)
 # screen.exitonclick()
 #################################################################3
-# Day 20 Challenge ############################
+# Day 20 & 21 Challenge ############################
 # from turtle import Turtle, Screen
+# import random
 #
-# # Setup the screen
+# # Constants
+# POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
+# MOVE_DISTANCE = 20
+# UP = 90
+# DOWN = 270
+# LEFT = 180
+# RIGHT = 0
+#
+# class Snake:
+#     def __init__(self):
+#         self.segments = []
+#         self.create_snake()
+#         self.head = self.segments[0]
+#
+#     def create_snake(self):
+#         for position in POSITIONS:
+#             new_segment = Turtle()
+#             new_segment.shape("square")
+#             new_segment.color("white")
+#             new_segment.penup()
+#             new_segment.goto(position)
+#             self.segments.append(new_segment)
+#
+#     def move(self):
+#         for part in range(len(self.segments) - 1, 0, -1):
+#             new_x = self.segments[part - 1].xcor()
+#             new_y = self.segments[part - 1].ycor()
+#             self.segments[part].goto(new_x, new_y)
+#         self.head.forward(MOVE_DISTANCE)
+#
+#     def up(self):
+#         if self.head.heading() != DOWN:
+#             self.head.setheading(UP)
+#
+#     def down(self):
+#         if self.head.heading() != UP:
+#             self.head.setheading(DOWN)
+#
+#     def left(self):
+#         if self.head.heading() != RIGHT:
+#             self.head.setheading(LEFT)
+#
+#     def right(self):
+#         if self.head.heading() != LEFT:
+#             self.head.setheading(RIGHT)
+#
+#     def check_collision(self):
+#         """Check if the snake collides with itself or the wall."""
+#         # Check for self-collision
+#         for segment in self.segments[1:]:
+#             if self.head.distance(segment) < 10:
+#                 return True
+#         # Check if the snake hits the wall
+#         if abs(self.head.xcor()) > 280 or abs(self.head.ycor()) > 280:
+#             return True
+#         return False
+#
+#     def increase_segments(self):
+#         """Add a new segment to the snake's body."""
+#         new_segment = Turtle()
+#         new_segment.shape("square")
+#         new_segment.color("white")
+#         new_segment.penup()
+#         last_segment_position = self.segments[-1].position()
+#         new_segment.goto(last_segment_position)
+#         self.segments.append(new_segment)
+#
+# class Food(Turtle):
+#     def __init__(self):
+#         super().__init__()
+#         self.shape("circle")
+#         self.penup()
+#         self.shapesize(stretch_wid=0.5, stretch_len=0.5)
+#         self.color('red')
+#         self.speed("fastest")
+#         self.refresh()
+#
+#     def refresh(self):
+#         x = random.randint(-280, 280)
+#         y = random.randint(-280, 280)
+#         self.goto(x, y)
+#
+# class Scoreboard(Turtle):
+#     def __init__(self):
+#         super().__init__()
+#         self.score = 0
+#         self.color("white")
+#         self.penup()
+#         self.hideturtle()
+#         self.goto(0, 260)
+#         self.update_scoreboard()
+#
+#     def update_scoreboard(self):
+#         """Clear and rewrite the score each time it's updated."""
+#         self.clear()
+#         self.write(f"Score: {self.score}", align="center", font=("Courier", 24, "normal"))
+#
+#     def increase_score(self):
+#         """Increase the score and update the display."""
+#         self.score += 1
+#         self.update_scoreboard()
+#
+#     def game_over(self):
+#         """Display Game Over message."""
+#         self.goto(0, 0)
+#         self.write("GAME OVER", align="center", font=("Courier", 36, "bold"))
+#         self.goto(0, -30)
+#         self.write(f"Final Score: {self.score}", align="center", font=("Courier", 24, "normal"))
+#
+# # Set up the screen
 # screen = Screen()
 # screen.setup(width=600, height=600)
 # screen.bgcolor("black")
-# screen.title("Snake 1.0")
-# screen.tracer(0)  # Turn off screen updates for smoother animation
+# screen.tracer(0)  # Turn off automatic screen updates
 #
-# # Create the snake
-# snakeSize = 3
-# snake = []
-# snakeHead = Turtle()
-# snakeHead.shape('square')
-# snakeHead.color('white')
-# snake.append(snakeHead)
+# # Create snake, food, and scoreboard
+# snake = Snake()
+# food = Food()
+# scoreboard = Scoreboard()
 #
-# # Create the body parts and add them to the snake
-# for _ in range(1, snakeSize):
-#     snakeBodyPart = Turtle()
-#     snakeBodyPart.shape('square')
-#     snakeBodyPart.color('white')
-#     snakeBodyPart.penup()
-#     snake.append(snakeBodyPart)
-#
-# # Position the snake segments
-# x_position = 0
-# for part in snake:
-#     part.penup()
-#     part.goto(x_position, 0)
-#     x_position -= 20
-#
-# # Define the snake movement
-# def move():
-#
-#     if snake[0].xcor() > 290 or snake[0].xcor() < -290 or snake[0].ycor() > 290 or snake[0].ycor() < -290:
-#         print("Game over! Snake hit the boundary.")
-#         return  # Stop moving if it hits the boundary
-#     # Move each segment in reverse order to follow the one ahead of it
-#     for idx in range(len(snake) - 1, 0, -1):
-#         new_x = snake[idx - 1].xcor()
-#         new_y = snake[idx - 1].ycor()
-#         snake[idx].goto(new_x, new_y)
-#
-#     # Move the snake head forward
-#     snake[0].forward(20)
-#
-#     # Call move again after a short delay (continuous movement)
-#     screen.update()  # Update the screen for smooth animation
-#     screen.ontimer(move, 100)  # Calls move() every 100 milliseconds
-#
-# # Control the snake direction with keyboard
-# def go_up():
-#     if snake[0].heading() != 270:  # Prevent the snake from going back on itself
-#         snake[0].setheading(90)
-#
-# def go_down():
-#     if snake[0].heading() != 90:
-#         snake[0].setheading(270)
-#
-# def go_left():
-#     if snake[0].heading() != 0:
-#         snake[0].setheading(180)
-#
-# def go_right():
-#     if snake[0].heading() != 180:
-#         snake[0].setheading(0)
-#
-# # Set up the key bindings
+# # Set up keyboard controls
 # screen.listen()
-# screen.onkey(go_up, "Up")
-# screen.onkey(go_down, "Down")
-# screen.onkey(go_left, "Left")
-# screen.onkey(go_right, "Right")
+# screen.onkey(snake.up, "Up")
+# screen.onkey(snake.down, "Down")
+# screen.onkey(snake.left, "Left")
+# screen.onkey(snake.right, "Right")
 #
-# # Start the movement
-# move()
+# # Game loop
+# game_is_on = True
+# def game_loop():
+#     screen.update()  # Update the screen manually after each loop
+#     snake.move()     # Move the snake
+#
+#     # Detect collision with food
+#     if snake.head.distance(food) < 15:
+#         food.refresh()
+#         scoreboard.increase_score()
+#         snake.increase_segments()
+#
+#     # Detect collision with wall or self
+#     if snake.check_collision():
+#         game_is_on = False
+#         scoreboard.game_over()
+#         return  # Stop the loop if there's a collision
+#
+#     screen.ontimer(game_loop, 100)  # Continue game loop
+#
+# # Start the game loop
+# game_loop()
 #
 # screen.exitonclick()
-# screen.mainloop()  # Keep the window open
-##########################################################################################
-# Day 21 Challenge #########################################
+############################################################
+# Day 23 Challenge ##########################
+
 
