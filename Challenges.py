@@ -1173,7 +1173,7 @@
 # start_race(racing_turtles)
 # screen.exitonclick()
 #################################################################3
-# Day 20 & 21 Challenge ############################
+# Day 21 & 22 Challenge ############################
 # from turtle import Turtle, Screen
 # import random
 #
@@ -1329,6 +1329,48 @@
 #
 # screen.exitonclick()
 ############################################################
-# Day 23 Challenge ##########################
-
-
+# Day 72 Challenge ##########################
+# import pandas as pd
+# # @title
+# df = pd.read_csv('salaries_by_college_major.csv')
+# df.head(7)
+# df.shape
+#
+# df.columns
+# df.isna()
+# df.tail()
+#
+# clean_df = df.dropna()
+# clean_df.tail()
+# clean_df['Starting Median Salary'].max()
+# clean_df['Starting Median Salary'].idxmax()
+# clean_df['Undergraduate Major'].loc[43]
+# clean_df.loc[43]
+# #Highest Mid-Career Salary
+# print(clean_df['Mid-Career Median Salary'].max())
+# print(f"Index for the max mid career salary: {clean_df['Mid-Career Median Salary'].idxmax()}")
+# clean_df['Undergraduate Major'][8]
+# #Lowest Starting Salary
+# print(clean_df['Starting Median Salary'].min())
+# clean_df['Undergraduate Major'].loc[clean_df['Starting Median Salary'].idxmin()]
+# #Lowest Mid-Career Salary
+# clean_df.loc[clean_df['Mid-Career Median Salary'].idxmin()]
+# # Calculating Risk or Potential of each Major
+# spread_col = clean_df['Mid-Career 90th Percentile Salary'] - clean_df['Mid-Career 10th Percentile Salary']
+# clean_df.insert(1, 'Spread', spread_col)
+# clean_df.head()
+# low_risk = clean_df.sort_values('Spread')
+# low_risk[['Undergraduate Major', 'Spread']].head()
+# # the Highest top 5 degrees in the 90th percentile
+# top5_90th = clean_df.sort_values("Mid-Career 90th Percentile Salary")
+# top5_90th[['Undergraduate Major','Mid-Career 90th Percentile Salary']].tail()
+# top5_spread = clean_df.sort_values("Spread")
+# top5_spread[['Undergraduate Major','Spread']].tail()
+# clean_df.groupby('Group').count()
+# # Average Salary by Groups STEM BUSINESS HASS
+# pd.options.display.float_format = '{:,.2f}'.format
+# numeric_df = clean_df[['Group'] + clean_df.select_dtypes(include=['number']).columns.tolist()]
+# group_means = numeric_df.groupby('Group').mean()
+# group_means
+#############################################
+# Day 73 Challenge ##############
